@@ -49,11 +49,12 @@ public class StringDemo {
 		System.out.println(xyz.hashCode());
 		xyz = xyz+"d";
 		
-		System.out.println(xyz.hashCode());
+		System.out.println(xyz);//8778687
 		
 		
+		A obj = new A();
 		
-		
+		System.out.println(obj);//package@memoryLocation
 		
 		
 		
@@ -62,4 +63,10 @@ public class StringDemo {
 		
 	}
 
+}
+
+
+class A extends Object
+{
+	
 }

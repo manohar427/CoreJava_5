@@ -10,6 +10,7 @@ public class EceptionManager {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Please provide Non 0 value:" + e.getMessage());
+			System.out.println("Avg:" + avg);
 		}
 		System.out.println("Avg:" + avg);
 	}

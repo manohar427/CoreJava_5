@@ -1,58 +1,61 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public class Sample {
-  public static void main(String[] args) {
-	System.out.println("Helow world 1");
+	public static void main(String[] args) throws IOException,
+			ClassNotFoundException {
+
+		/*Address ad = new Address("Line1", 1232);
+		Cust c = new Cust("Abc", 120,ad);
+		c.name = "PQR";
+
+		System.out.println("Before:" + c);
+		FileOutputStream fo = new FileOutputStream("abc.txt");
+		ObjectOutputStream oos = new ObjectOutputStream(fo);
+
+		oos.writeObject(c);
+
+		oos.close();
+
+		System.out.println("Done");*/
+
+		FileInputStream fip = new FileInputStream("abc.txt");
+		ObjectInputStream oip = new ObjectInputStream(fip);
+
+		Cust c11 = (Cust) oip.readObject();
+
+		oip.close();
+
+		System.out.println(c11);
+	}
+
+}
+
+class Cust implements Serializable {
+
+	private static final long serialVersionUID = 674960698299761276L;
+	String age;
+	static String name="A";
+	transient int weight=99;
+	Address address;
 	
-	Sample sample = new Sample();
-	int sum = sample.add(10, 15);
-	System.out.println("Sum 10,15:"+sum);
-}
-  
-  int add(int x,int y){
-	  
-	  int z = x+y;
-	  //System.out.println("Sum:"+z);
-	  return z;
-  
-  }
-  
-int add(int x,int y,int p){
-	  
-	  int z = x+y;
-	  System.out.println("Sum:"+z);
-	  return z;
-  
-  }
+	
+	public Cust(String age, int weight, Address address) {
+		super();
+		this.age = age;
+		this.weight = weight;
+		this.address = address;
+	}
 
 
-String name(String x,String y){
-	  
-	  String  z = x+y;
-	  System.out.println("Sum:"+z);
-	  return z;
-
-}
-
- void dataTypeDemo(){
-	 int x=1067676988;//32-bits
-	 long l =1067676988888845l;//64-bits
-	 
-	 double y= 12.34;//64-bit
-	 float z = 12.34f;//32-bit
-	 
-	 String name = "xyzsdasdasdasdasdasdsdasdas";
-	 char gender = 'm';
-	 
-	 byte  b = -128;//8 bits 010101010
-	 byte bb = 10;
-	 System.out.println("ok");
-	 
-	 String all[] = {"Abc","Pqr","Xyz"};
-	 int marks [] = {12,23,12,45,56,6,6,6,6,6};
-	 
- }
-
-
-
+	public String toString() {
+		return "Cust [age=" + age + ", weight=" + weight + ", address="
+				+ address + ", name=" + name+"]";
+	}
 
 }

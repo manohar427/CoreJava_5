@@ -12,7 +12,7 @@ public class ConstDemo extends A{
 		System.out.println("Sum:"+sum);
 		
 		
-		//A a = new A();
+		//A a = new A(); hhhh
 		
 		
 		String s = ce.add("Abc", "Pqr");

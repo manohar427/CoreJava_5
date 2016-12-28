@@ -11,8 +11,14 @@ import java.io.ObjectOutputStream;
 public class SerilizationManager {
 
 	public static void main(String[] args) {
-		/*Customer c = new Customer("Abc", "abc@email.com", "122324");
-
+		Customer c = new Customer();
+		c.password = "@#$@#$34324";
+		c.ssnNum = "AEEEEE";
+		c.accNum = "A67868787";
+		c.email = "abc@email.com";
+		c.name = "abc";
+		
+		System.out.println("customer Info :"+c);
 		File f = new File("cust.txt");
 		try {
 			FileOutputStream fos = new FileOutputStream(f);
@@ -28,26 +34,7 @@ public class SerilizationManager {
 		}
 		catch (IOException e) {
 			e.printStackTrace();
-		}*/
-		
-		File f = new File("cust.txt");
-		
-		try {
-			FileInputStream fip = new FileInputStream(f);
-			ObjectInputStream oip = new ObjectInputStream(fip);
-			Customer c = (Customer)oip.readObject();
-			oip.close();
-			System.out.println(c);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		}
-		catch (IOException e) {
-			e.printStackTrace();
-		}
-		catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
 		
 		
 	}

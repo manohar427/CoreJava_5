@@ -32,6 +32,9 @@ public class BufferDemo {
 				System.out.println(oneLine);
 			}
 			br.close();
+			
+			
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

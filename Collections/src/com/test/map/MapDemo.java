@@ -1,4 +1,4 @@
-package com.test;
+package com.test.map;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

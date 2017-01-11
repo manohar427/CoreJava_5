@@ -45,6 +45,9 @@ public class DBConnectionManager {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
+		//hjhj
+		
 	}
 
 }

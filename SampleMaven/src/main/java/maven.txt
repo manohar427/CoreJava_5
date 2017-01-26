@@ -1,0 +1,24 @@
+Adv:
+1.It provide all vendor jars.
+2.maven will compile the java files and it will generate the .class files.
+3.It will generate jar/war/ear
+4.It will exec Junits and publish the results.
+5.It will deploy the jar/war/ear in to server location.
+
+Configuration:
+1.Download maven : https://maven.apache.org/download.cgi
+
+http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip
+
+2.M2_HOME:D:\Instalation\apache-maven-3.3.9
+  path:D:\Instalation\apache-maven-3.3.9\bin
+
+Java:
+JAVA_HOME:
+Path:
+
+3.mvn -version
+  mvn install
+  mvn install -DskipTests=true
+
+4.https://mvnrepository.com
